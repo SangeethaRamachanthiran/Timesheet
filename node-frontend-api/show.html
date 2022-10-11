@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists of timesheet Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+  <nav class="navbar navbar-light bg-dark">
+    <div>
+        <button class="btn border-light" type="button">
+            <a href="./index.html" style="text-decoration: none; color: white;">Add</a>
+        </button>
+        <button class="btn border-light" type="button">
+            <a href="./show.html" style="text-decoration: none; color: white;">Show</a>
+        </button>
+    </div>
+  </nav>
+    <div id="header" class="container">
+        <div class="row bg-dark text-white" id="heading">
+            <div class="col-sm- border border-white">S.N</div>
+            <div class="col-md border border-white">Username</div>
+            <div class="col-md border border-white">Task name</div>
+            <div class="col-md border border-white">Task date</div>
+            <div class="col-md border border-white">How many hours ?</div>
+            <div class="col-md border border-white">Edit</div>
+            <div class="col-md border border-white">Delete</div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div id="content">
+
+        </div>
+        <div id="edit_form" class="container" style="display: none;">
+      
+        </div>
+    </div>
+    
+    
+
+    <script type ="text/javascript" src="./assets/js/index.js"></script>
+    <script>
+      getApi("http://localhost:3000/api/timesheets");
+      
+      function passingApi(id) {
+        document.getElementById("edit_form").style.display = "block";
+        document.getElementById("content").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        getApiSingleData("http://localhost:3000/api/timesheets/"+id);
+      }
+    </script>
+    <script type ="text/javascript" src="./assets/js/apicall.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous">
+    </script> 
+</body>
+</html>

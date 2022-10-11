@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./assets/js/apicall.js"></script>
+
+    <style>
+        .container{
+            margin-top: 6%;
+        }
+        #text{
+            margin-top: 4%;
+        }
+        #button{
+            margin-left: 42%;
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-dark">
+        <div>
+            <button class="btn border-light" type="button">
+                <a href="./index.html" style="text-decoration: none; color: white;">Add</a>
+            </button>
+            <button class="btn border-light" type="button">
+                <a href="./show.html" style="text-decoration: none; color: white;">Show</a>
+            </button>
+            <button class="btn border-light" type="button">
+                <a href="./show.html" style="text-decoration: none; color: white;">Login</a>
+            </button>
+        </div>
+    </nav>
+    <h1 class="text-center display-4 text-dark" id="text">Time Sheet List</h1>
+    <div class="container">
+        <form>
+            <input class="form-control" id="email_id" type="text" name="email_id" placeholder="Enter your email id :" required><br>
+            <input class="form-control" id="password" type="password" name="password" placeholder="Enter your password :" required><br>
+            <button type="submit" class="pe-3 ps-3 pb-2 pt-2 btn btn-outline-secondary">
+                Submit
+            </button>
+        </form>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous">
+    </script>
+</body>
+</html>
