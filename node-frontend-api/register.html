@@ -41,7 +41,7 @@
     </nav>
     <h1 class="text-center display-4 text-dark" id="text">Time Sheet List</h1>
     <div class="container">
-        <form>
+        <form onsubmit="createUser()">
             <input class="form-control" id="first_name" type="text" name="first_name" placeholder="Enter your first name :" required><br>
             <input class="form-control" id="last_name" type="text" name="last_name" placeholder="Enter your last name:" required><br>
             <input type="radio" id="male" name="gender" value="male">
@@ -52,9 +52,10 @@
             <label for="other">Other</label>
             <input class="form-control" id="email" type="text" name="email" placeholder="Enter your email :"required><br>
             <input class="form-control" id="password" type="password" name="password" placeholder="Create password :"required><br>
-            <button type="submit" class="pe-3 ps-3 pb-2 pt-2 btn btn-outline-secondary">
+            <button onclick="checkRadio()" type="submit" class="pe-3 ps-3 pb-2 pt-2 btn btn-outline-secondary">
                 Submit
             </button>
+            <p style="display: none;" id="radioBox"></p>
         </form>
     </div>
     <script

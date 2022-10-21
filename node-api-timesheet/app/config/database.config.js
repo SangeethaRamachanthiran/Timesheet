@@ -1,4 +1,4 @@
-require("dotenv").config({path: '/home/sangeetha/Projects/node-api-timesheet/.env'});
+require("dotenv").config({path: '/home/sangeetha/Projects/Timesheet/node-api-timesheet/.env'});
 
 module.exports = {
     HOST: process.env.DB_HOST,
